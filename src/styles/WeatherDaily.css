@@ -1,0 +1,55 @@
+.dailyTitle , .hourlyTitle{
+    color: var(--Neutral-0);
+    font-weight: 400;
+}
+
+.dailyTitle{
+    margin: 0.5rem 0;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
+.seven__days , .emptyData{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.day , .empty{
+    background-color: var(--Neutral-800);
+    border: 1px solid var(--Neutral-600);
+    border-radius: 6px;
+    width: 80px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekday , .max , .min{
+    color: var(--Neutral-0);
+}
+
+.day__temperature{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.daily{
+    grid-area: daily;
+}
+
+@media screen and (max-width : 690px) {
+    .seven__days , .emptyData{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        margin-inline: auto;
+    }
+}

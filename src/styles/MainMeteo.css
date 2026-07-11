@@ -1,0 +1,73 @@
+.main__meteo{
+    height: 220px;
+    width: 100%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 0.5rem;
+    grid-area: main;
+    background-color: var(--Neutral-800);
+    border: 1px solid var(--Neutral-600);
+    position: relative;
+}
+
+.received{
+    background-image: url('../assets/images/bg-today-large.svg');
+}
+
+.main__icon{
+    width: 80px;
+    height: 80px;
+}
+
+.temperature{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 0.7rem;
+}
+
+.temperature__value{
+    color: var(--Neutral-0);
+    font-family: var(--DM);
+    font-size: 4rem;
+    transform: skew(-13deg);
+}
+
+.country{
+    color: var(--Neutral-0);
+    font-family: var(--DM);
+}
+
+.date{
+    color: var(--Neutral-300);
+    font-family: var(--DM);
+}
+
+.load{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.load__progress{
+    width: 80px;
+}
+
+.load__p{
+    color: var(--Neutral-0);
+}
+
+@media screen and (max-width : 690px) {
+    .received{
+        background-image: url('../assets/images/bg-today-small.svg');
+    }
+
+    
+}

@@ -1,0 +1,114 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.header__right{
+    position: relative;
+}
+
+.header__data{
+    background-color: var(--Neutral-800);
+    border: 1px solid var(--Neutral-600);
+    position: absolute;
+    z-index: 20;
+    top: 120%;
+    right: 1%;
+    width: 180px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 400ms , opacity 400ms;
+}
+
+.showData{
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.unit{
+    background-color: var(--Neutral-600);
+    color: var(--Neutral-0);
+    font-family: var(--DM);
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--Neutral-600);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.unit::after{
+    content: url('../assets/images/icon-dropdown.svg');
+}
+
+.unit::before{
+    content: url('../assets/images/icon-units.svg');
+}
+
+.unit:hover{
+    cursor: pointer;
+}
+
+label{
+    display: block;
+    color: var(--Neutral-0);
+    font-family: var(--DM);
+    padding: 0.5rem 0.4rem;
+}
+
+.header__temperature__data label:hover{
+    cursor: not-allowed;
+}
+
+input[type = radio]{
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.switch{
+    background-color: var(--Neutral-800);
+    color: var(--Neutral-0);
+    font-family: var(--DM);
+    font-weight: 500;
+    border: 1px solid var(--Neutral-800);
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    padding: 0.3rem 0.4rem;
+    border-radius: 6px;
+}
+
+.switch:hover{
+    background-color: var(--Neutral-600);
+    cursor: pointer;
+}
+
+h4{
+    color: var(--Neutral-200);
+    font-family: var(--DM);
+    font-weight: 400;
+    padding: 0.4rem 0.4rem;
+}
+
+.showUnit{
+    background-color: var(--Neutral-600);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showUnit::after{
+    content: url('../assets/images/icon-checkmark.svg');
+}

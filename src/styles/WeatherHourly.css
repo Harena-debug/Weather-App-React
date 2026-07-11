@@ -1,0 +1,84 @@
+.hourly__day{
+    background-color: var(--Neutral-600);
+    border-radius: 6px;
+    border: 1px solid var(--Neutral-600);
+    color: var(--Neutral-0);
+    font-weight: 500;
+    padding: 0.5rem 0.6rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hourly__day::after{
+    content: url('../assets/images/icon-dropdown.svg');
+}
+
+.hourly__day:hover{
+    cursor: pointer;
+}
+
+.hourly{
+    background-color: var(--Neutral-800);
+    border: 1px solid var(--Neutral-600);
+    border-radius: 8px;
+    padding: 0.7rem;
+    grid-area: hourly;
+}
+
+.hourly__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 0.4rem;
+}
+
+.days{
+    position: absolute;
+    top: 120%;
+    right: 1%;
+    background-color: var(--Neutral-800);
+    border: 1px solid var(--Neutral-600);
+    border-radius: 6px;
+    z-index: 30;
+    width: 150px;
+    padding: 0.3rem;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 400ms , opacity 400ms;
+}
+
+.showDays{
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.days label:hover{
+    background-color: var(--Neutral-600);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hours , .time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hours{
+    background-color: var(--Neutral-700);
+    border: 1px solid var(--Neutral-600);
+    border-radius: 6px;
+    margin: 0.6rem 0;
+    padding: 0.1rem 0.4rem;
+    height: 40px;
+}
+
+.heure , .hour__temperature{
+    color: var(--Neutral-0);
+}

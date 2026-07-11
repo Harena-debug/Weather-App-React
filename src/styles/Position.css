@@ -1,0 +1,28 @@
+.feel , .humidity , .wind , .precipitation{
+    background-color: var(--Neutral-800);
+    border: 1px solid var(--Neutral-600);
+    border-radius: 6px;
+    padding: 0.5rem 0.4rem 0.7rem 0.5rem;
+}
+
+.dataMeteo{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 1rem;
+}
+
+.feel__title , .humidity__title , .wind__title , .precipitation__title{
+    color: var(--Neutral-200);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.feel__data , .humidity__data , .wind__data , .precipitation__data{
+    color: var(--Neutral-0);
+}
+
+@media screen and (max-width : 730px) {
+    .dataMeteo{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
